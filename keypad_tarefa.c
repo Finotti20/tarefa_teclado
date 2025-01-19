@@ -78,3 +78,43 @@ void set_buzzer_frequency(uint pin, uint frequency) {
      pwm_set_gpio_level(pin, 0); // Inicializa com duty cycle 0 (sem som)
 }
 
+
+// Função para controlar LEDs e Buzzer com base na tecla pressionada
+void control_leds_and_buzzer(char key)
+{
+    switch (key)
+    {
+    case 'A': // Acende o LED Verde
+        gpio_put(GREEN_LED_PIN, 1);
+        gpio_put(BLUE_LED_PIN, 0);
+        gpio_put(RED_LED_PIN, 0);
+        break;
+
+    case 'B': // Acende o LED Azul
+        gpio_put(GREEN_LED_PIN, 0);
+        gpio_put(BLUE_LED_PIN, 1);
+        gpio_put(RED_LED_PIN, 0);
+        break;
+
+    case 'C': // Acende o LED Vermelho
+        gpio_put(GREEN_LED_PIN, 0);
+        gpio_put(BLUE_LED_PIN, 0);
+        gpio_put(RED_LED_PIN, 1);
+        break;
+
+    case 'D': // Acende todos os LEDs
+        gpio_put(GREEN_LED_PIN, 1);
+        gpio_put(BLUE_LED_PIN, 1);
+        gpio_put(RED_LED_PIN, 1);
+        break;
+
+    case '#': // Toca o buzzer a 3350 Hz por 500 ms break
+        play_buzzer(BUZZER_PIN, 3350, 500); 
+
+    default: // Apaga todos os LEDs
+        gpio_put(GREEN_LED_PIN, 0);
+        gpio_put(BLUE_LED_PIN, 0);
+        gpio_put(RED_LED_PIN, 0);
+        break;
+    }
+}
