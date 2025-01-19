@@ -80,7 +80,7 @@ char scan_keypad()
                 return key_map[row][col];
             }
         }
-        gpio_put(row_pins[row], 1); // Restaura a linha para HIGH.
+        gpio_put(row_pins[row], 1); // Restaura a linha para HIGH..
     }
     return '\0';
 }
