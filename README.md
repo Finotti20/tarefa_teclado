@@ -83,14 +83,14 @@ Este projeto utiliza o **Raspberry Pi Pico W** para controlar três LEDs (vermel
 ```
 ---
 🎮 Comandos e Funções
-```markdown
+
 | **Tecla** | **Função**                               | **Ação**                                |
 |-----------|------------------------------------------|-----------------------------------------|
 | `A`       | Acende o LED verde                       | 💡 Verde                               |
 | `B`       | Acende o LED azul                        | 💡 Azul                                |
 | `C`       | Acende o LED vermelho                    | 💡 Vermelho                            |
 | `D`       | Acende todos os LEDs                    | 🌈 Luz branca                          |
-| `#`       | Toca o buzzer a 3350 Hz por 500 ms      | 🎵 Toque do buzzer                     |
+| `#`       | Toca o buzzer      | 🎵 Toque do buzzer                     |
 | `*`       | Apaga todos os LEDs                     | ❌ Desliga todos os LEDs               |
 ```
 ---
