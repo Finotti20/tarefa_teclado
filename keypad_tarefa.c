@@ -62,3 +62,19 @@ char scan_keypad()
     }
     return '\0';
 }
+
+
+void set_buzzer_frequency(uint pin, uint frequency) {
+     // Obter o slice do PWM associado ao pino
+     uint slice_num = pwm_gpio_to_slice_num(pin);
+
+     // Configurar o pino como saída de PWM
+     gpio_set_function(pin, GPIO_FUNC_PWM);
+     
+     // Configurar o PWM com frequência desejada
+     pwm_config config = pwm_get_default_config();
+     pwm_config_set_clkdiv(&config, clock_get_hz(clk_sys) / (frequency * 4096)); // Calcula divisor do clock
+     pwm_init(slice_num, &config, true);
+     pwm_set_gpio_level(pin, 0); // Inicializa com duty cycle 0 (sem som)
+}
+
