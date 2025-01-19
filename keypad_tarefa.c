@@ -78,3 +78,10 @@ void set_buzzer_frequency(uint pin, uint frequency) {
      pwm_set_gpio_level(pin, 0); // Inicializa com duty cycle 0 (sem som)
 }
 
+void play_buzzer(uint pin, uint frequency, uint duration_ms){
+
+    set_buzzer_frequency(pin, frequency);
+    pwm_set_gpio_level(pin, 2048);
+    sleep_ms(duration_ms);
+    pwm_set_gpio_level(pin, 0);
+}
