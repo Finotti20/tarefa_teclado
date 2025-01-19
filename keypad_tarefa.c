@@ -42,6 +42,25 @@ void init_gpio() {
     }
 }
 
+// Inicializa LEDs e Buzzer
+void init_leds_and_buzzer() {
+    gpio_init(GREEN_LED_PIN);
+    gpio_set_dir(GREEN_LED_PIN, GPIO_OUT);
+    gpio_put(GREEN_LED_PIN, 0);
+
+    gpio_init(BLUE_LED_PIN);
+    gpio_set_dir(BLUE_LED_PIN, GPIO_OUT);
+    gpio_put(BLUE_LED_PIN, 0);
+
+    gpio_init(RED_LED_PIN);
+    gpio_set_dir(RED_LED_PIN, GPIO_OUT);
+    gpio_put(RED_LED_PIN, 0);
+
+    gpio_init(BUZZER_PIN);
+    gpio_set_dir(BUZZER_PIN, GPIO_OUT);
+    gpio_put(BUZZER_PIN, 0);
+}
+
 // Verifica qual tecla foi pressionada
 char scan_keypad()
 {
