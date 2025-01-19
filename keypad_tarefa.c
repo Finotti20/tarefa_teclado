@@ -24,7 +24,23 @@ const char key_map[ROWS][COLS] = {
     {'1', '2', '3', 'A'},
     {'4', '5', '6', 'B'},
     {'7', '8', '9', 'C'},
-    {'*', '0', '#', 'D'}};
+    {'*', '0', '#', 'D'}
+};
+
+// Inicializa as linhas como saída e colunas como entrada
+void init_gpio() {
+    
+    for (int i = 0; i < ROWS; i++) {
+        gpio_init(row_pins[i]);
+        gpio_set_dir(row_pins[i], GPIO_OUT);
+        gpio_put(row_pins[i], 1); // Linha inicialmente em HIGH
+    }
+    for (int i = 0; i < COLS; i++) {
+        gpio_init(col_pins[i]);
+        gpio_set_dir(col_pins[i], GPIO_IN);
+        gpio_pull_up(col_pins[i]); // Ativa pull-up nas colunas
+    }
+}
 
 // Verifica qual tecla foi pressionada
 char scan_keypad()
