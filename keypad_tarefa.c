@@ -144,3 +144,23 @@ void control_leds_and_buzzer(char key)
         break;
     }
 }
+
+int main() { 
+    stdio_init_all(); 
+    init_gpio(); 
+    init_leds_and_buzzer(); 
+ 
+    printf("Teclado Matricial 4x4 Controle de LEDs e Buzzer Iniciado.\n"); 
+    printf("A - Aciona LED verde\nB - Aciona LED azul\nC - Aciona LED vermelho\nD - Aciona todos os LEDs\n# - Aciona Buzzer\n\n"); 
+ 
+    while (1) { 
+        char key = scan_keypad(); 
+        if (key != '\0') { 
+            printf("Tecla pressionada: %c\n", key); 
+            control_leds_and_buzzer(key); 
+        } 
+        sleep_ms(100); 
+    } 
+ 
+    return 0; 
+}
