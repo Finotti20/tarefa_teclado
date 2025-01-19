@@ -6,12 +6,14 @@ Este projeto utiliza o **Raspberry Pi Pico W** para controlar três LEDs (vermel
 
 ## 👨‍💻 Desenvolvedores
 
+- **Felipe Chaves Lacerda**
 - **Gabriel Finotti Barros**  
 - **Mariana Farias da Silva**  
 - **Pablo Vinicius Rodrigues Barboza**  
 - **Pedro Henrique Carvalho Felix**  
 - **Ramon Leite Petitinga**
-- **Felipe Chaves Lacerda**
+- **Samuel Rodrigues**
+
 
 ---
 
