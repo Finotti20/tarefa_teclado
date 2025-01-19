@@ -82,7 +82,7 @@ Este projeto utiliza o **Raspberry Pi Pico W** para controlar três LEDs (vermel
    - Copie o arquivo `.uf2` gerado para a unidade montada.
 ```
 ---
-🎮 Comandos e Funções
+## 🎮 Comandos e Funções
 
 | **Tecla** | **Função**                               | **Ação**                                |
 |-----------|------------------------------------------|-----------------------------------------|
@@ -92,9 +92,10 @@ Este projeto utiliza o **Raspberry Pi Pico W** para controlar três LEDs (vermel
 | `D`       | Acende todos os LEDs                    | 🌈 Luz branca                          |
 | `#`       | Toca o buzzer      | 🎵 Toque do buzzer                     |
 | `*`       | Apaga todos os LEDs                     | ❌ Desliga todos os LEDs               |
-```
+
+
 ---
-🎥 Demonstração
+## 🎥 Demonstração
 
 ```plaintext
 https://youtu.be/w7YDV_CNgn4
